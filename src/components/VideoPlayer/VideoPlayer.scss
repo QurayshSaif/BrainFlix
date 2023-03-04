@@ -1,0 +1,28 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/fonts' as *;
+
+.video{
+    width: 100%;
+    background-color: $brainFlix-darkBlack;
+    display: flex;
+    justify-content: center;
+
+    @include desktop{
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    &__player{
+        width: 100%;
+
+        @include tablet{
+            width: 90%;
+        }
+
+        @include desktop{
+            width: 75%;
+        }
+    }
+}
+

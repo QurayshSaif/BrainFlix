@@ -1,11 +1,15 @@
-import Header from "./components/Header/header";
 import "./App.scss";
+import VideoDetails from "./data/video-details.json";
+
+import Header from "./components/Header/header";
+import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 
 function App() {
   return (
-    <body>
+    <>
       <Header />
-    </body>
+      <VideoPlayer image={VideoDetails[0].image} />
+    </>
   );
 }
 
