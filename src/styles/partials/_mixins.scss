@@ -1,0 +1,16 @@
+@use './variables' as *;
+
+//mixin breakpoint for tablet - 768px
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+//mixin breakpoint for desktop - 1280px
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}

@@ -1,0 +1,75 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/fonts' as *;
+
+.header{
+    margin: 0 1rem;
+
+    @include tablet{
+        display: flex;
+        align-items: center;
+        margin: 0 1.5rem;
+    }
+
+    @include desktop{
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    &__logo-container{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+    }
+
+    &__container{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        @include tablet{
+            & :nth-child(2) {order:1;}
+            flex-wrap: nowrap;
+            gap: 1rem;
+            margin-left: auto;
+        }
+    }
+
+    &__logo{
+        height: 1.8rem;
+    }
+
+    &__image{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: auto;
+        margin-left: 1rem;
+
+        @include tablet{
+            margin-left: 0;
+        }
+    }
+
+    &__search{
+        width: 58%;
+        height: 3rem;
+        background-image: url("../../assets/icons/search.svg");
+        background-repeat: no-repeat;
+        background-position: 0.65rem;
+        padding-left: 2.5rem;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        margin-left: auto;
+        max-width: 600px;
+
+        @include tablet{
+            width: 10rem;
+        }
+
+        @include desktop{
+            width: 10rem;
+        }
+    }
+}
