@@ -1,37 +1,41 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/fonts' as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
 
-.button{
-    width: 95%;
-    background-color: $brainFlix-blue;
-    height: 3rem;
-    margin: 1rem auto;
+.button {
+  width: 95%;
+  background-color: $brainFlix-blue;
+  height: 3rem;
+  margin: 1rem auto;
+  max-width: 500px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    width: 12rem;
+    max-width: 10rem;
+  }
+
+  @include desktop {
     max-width: 500px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
+  }
 
-    @include tablet{
-        width: 12rem;
-        max-width: 10rem;
+  &__icon {
+    padding: 0.5rem;
+    height: 1.8rem;
+  }
+
+  &__text {
+    color: white;
+    margin: 0 auto;
+
+    @include tablet {
+      margin: 0 auto 0 1.5rem;
     }
+  }
 
-    @include desktop{
-        max-width: 500px;
-    }
-
-    &__icon{
-        padding: 0.5rem;
-        height: 1.8rem;
-    }
-
-    &__text{
-        color: white;
-        margin: 0 auto;
-
-        @include tablet{
-            margin: 0 auto 0 1.5rem;
-        }
-    }
+  @media screen and (max-width: 768px) {
+    margin: 1rem 0 0;
+  }
 }

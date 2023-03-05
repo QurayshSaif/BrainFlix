@@ -11,24 +11,20 @@ import VideoDetails from "./components/VideoDetails/VideoDetails";
 function App() {
   const [activeVideo, setActiveVideo] = useState(JsonVideoDetails[0]);
   const onClickVideoHandler = (id) => {
+    //Determine the first object that matches the id
     const selectedVideo = JsonVideoDetails.find((video) => {
       return id === video.id;
     });
     console.log(selectedVideo);
+    //set this particular usestate with the selected object
+    // if no object is found, it will response with {}
     setActiveVideo(selectedVideo);
   };
   return (
     <>
       <Header />
-      <VideoPlayer image={activeVideo.image} />
-      <VideoDetails
-        title={activeVideo.title}
-        subtitle={activeVideo.channel}
-        views={activeVideo.views}
-        date={activeVideo.timestamp}
-        likes={activeVideo.likes}
-        description={activeVideo.description}
-      />
+      <VideoPlayer image={activeVideo?.image || ""} />
+      <VideoDetails {...activeVideo} />
       <VideoList
         onClickVideoHandler={onClickVideoHandler}
         videoList={Videos}

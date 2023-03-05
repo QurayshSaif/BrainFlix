@@ -16,6 +16,7 @@ export default function VideoList({
       {inactiveVideo.map((video) => {
         return (
           <VideoItem
+            key={video.id}
             id={video.id}
             image={video.image}
             title={video.title}
