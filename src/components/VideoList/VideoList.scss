@@ -1,0 +1,26 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.video-list {
+  margin: 1rem;
+  border-top: 1px solid $brainFlix-silver;
+
+  @include tablet {
+    margin: 1.5rem;
+  }
+
+  @include desktop {
+    border: none;
+  }
+
+  &__title {
+    color: $brainFlix-silver;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+
+    @include tablet {
+      margin: 2rem 0;
+    }
+  }
+}
