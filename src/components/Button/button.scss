@@ -6,11 +6,11 @@
   width: 95%;
   background-color: $brainFlix-blue;
   height: 3rem;
-  margin: 1rem auto;
   max-width: 500px;
   border-radius: 5px;
   display: flex;
   align-items: center;
+  border: none;
 
   @include tablet {
     width: 12rem;
@@ -35,7 +35,7 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     margin: 1rem 0 0;
   }
 }

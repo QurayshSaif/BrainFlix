@@ -7,6 +7,7 @@ import Header from "./components/Header/header";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import VideoList from "./components/VideoList/VideoList";
 import VideoDetails from "./components/VideoDetails/VideoDetails";
+import Comments from "./components/Comments/Comments";
 
 function App() {
   const [activeVideo, setActiveVideo] = useState(JsonVideoDetails[0]);
@@ -25,6 +26,7 @@ function App() {
       <Header />
       <VideoPlayer image={activeVideo?.image || ""} />
       <VideoDetails {...activeVideo} />
+      <Comments />
       <VideoList
         onClickVideoHandler={onClickVideoHandler}
         videoList={Videos}

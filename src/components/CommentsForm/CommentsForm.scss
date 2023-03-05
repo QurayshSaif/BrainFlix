@@ -1,0 +1,72 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+
+.comments-form {
+  display: flex;
+
+  &__icon-container {
+    width: 5rem;
+  }
+
+  &__container {
+    width: 80%;
+  }
+
+  &__icon {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 2rem 1rem 0 1rem;
+  }
+
+  &__form {
+    width: 95%;
+    @include tablet {
+      display: flex;
+      width: 100%;
+      align-items: flex-end;
+      gap: 1.5rem;
+    }
+  }
+
+  &__input-container {
+    @include tablet {
+      width: 90%;
+    }
+  }
+
+  &__input-label {
+    color: $brainFlix-silver;
+    display: block;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  &__input-text {
+    box-sizing: border-box;
+    display: block;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1.5px solid $brainFlix-mercury;
+    font-size: 1rem;
+    width: 95%;
+    background-color: $brainFlix-alabaster;
+    resize: none;
+    height: 7rem;
+    margin-right: 0;
+    &::placeholder {
+      color: $brainFlix-black;
+      font-family: Avenir;
+    }
+
+    @include tablet {
+      height: 3rem;
+      padding: 0.5rem;
+      width: 100%;
+    }
+  }
+}

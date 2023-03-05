@@ -1,0 +1,13 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+
+.comments {
+  margin: 1rem;
+
+  @include desktop {
+    display: block;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}

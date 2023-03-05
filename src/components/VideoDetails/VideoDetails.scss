@@ -9,6 +9,11 @@
     margin: 2rem;
   }
 
+  @include desktop {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
   &__title {
     font-size: 1.7rem;
 
