@@ -25,13 +25,19 @@ function App() {
     <>
       <Header />
       <VideoPlayer image={activeVideo?.image || ""} />
-      <VideoDetails {...activeVideo} />
-      <Comments video={activeVideo} />
-      <VideoList
-        onClickVideoHandler={onClickVideoHandler}
-        videoList={Videos}
-        activeVideo={activeVideo}
-      />
+      <div className="desktop">
+        <div className="desktop__details-side">
+          <VideoDetails {...activeVideo} />
+          <Comments video={activeVideo} />
+        </div>
+        <div className="desktop__aside">
+          <VideoList
+            onClickVideoHandler={onClickVideoHandler}
+            videoList={Videos}
+            activeVideo={activeVideo}
+          />
+        </div>
+      </div>
     </>
   );
 }

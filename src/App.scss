@@ -1,10 +1,37 @@
 @use "./styles/partials/fonts" as *;
 @use "./styles/partials/mixins.scss" as *;
+@use "./styles/partials/variables" as *;
+
 body {
   font-family: "Avenir", Arial, Helvetica, sans-serif;
   margin: 0;
   @include desktop {
     max-width: 80rem;
     margin: 0 auto;
+  }
+}
+// h1,
+// h2 {
+//   font-weight: 700;
+// }
+p {
+  line-height: 1.5rem;
+}
+.desktop {
+  @include desktop {
+    display: flex;
+  }
+
+  &__details-side {
+    @include desktop {
+      margin: 1.5rem;
+    }
+  }
+
+  &__aside {
+    @include desktop {
+      border-left: 1px solid $brainFlix-mercury;
+      // width: 50%;
+    }
   }
 }

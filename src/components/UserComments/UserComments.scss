@@ -5,9 +5,13 @@
 .comments {
   &__container {
     border-top: 1px solid $brainFlix-mercury;
-    margin-top: 2.5rem;
+    margin-top: 0.5rem;
     padding-top: 1rem;
     display: flex;
+
+    @include desktop {
+      margin-top: 1rem;
+    }
 
     &--border {
       border-bottom: 1px solid $brainFlix-mercury;
