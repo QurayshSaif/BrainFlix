@@ -11,6 +11,10 @@
   align-items: center;
   border: none;
 
+  &:hover {
+    background-color: $brainFlix-darkBlue;
+  }
+
   @include tablet {
     width: 12rem;
     max-width: 10rem;

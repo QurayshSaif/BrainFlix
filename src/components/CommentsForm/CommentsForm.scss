@@ -55,17 +55,21 @@
     box-sizing: border-box;
     display: block;
     padding: 1rem;
-    border-radius: 6px;
-    border: 1.5px solid $brainFlix-mercury;
+    border-radius: 4px;
+    border: 1px solid $brainFlix-mercury;
     font-size: 1rem;
     width: 95%;
     background-color: $brainFlix-alabaster;
     resize: none;
     height: 7rem;
     margin-right: 0;
+    overflow-y: hidden;
     &::placeholder {
       color: $brainFlix-black;
       font-family: Avenir;
+    }
+    &:focus {
+      border: 3px solid $brainFlix-blue;
     }
 
     @include tablet {

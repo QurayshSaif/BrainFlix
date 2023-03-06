@@ -12,19 +12,21 @@ export default function VideoList({
 
   return (
     <section className="video-list">
-      <h2 className="video-list__title">NEXT VIDEOS</h2>
-      {inactiveVideo.map((video) => {
-        return (
-          <VideoItem
-            key={video.id}
-            id={video.id}
-            image={video.image}
-            title={video.title}
-            subtitle={video.channel}
-            onClickVideoHandler={onClickVideoHandler}
-          />
-        );
-      })}
+      <div className="video-list__container">
+        <h2 className="video-list__title">NEXT VIDEOS</h2>
+        {inactiveVideo.map((video) => {
+          return (
+            <VideoItem
+              key={video.id}
+              id={video.id}
+              image={video.image}
+              title={video.title}
+              subtitle={video.channel}
+              onClickVideoHandler={onClickVideoHandler}
+            />
+          );
+        })}
+      </div>
     </section>
   );
 }
