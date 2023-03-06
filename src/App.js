@@ -26,7 +26,7 @@ function App() {
       <Header />
       <VideoPlayer image={activeVideo?.image || ""} />
       <VideoDetails {...activeVideo} />
-      <Comments />
+      <Comments video={activeVideo} />
       <VideoList
         onClickVideoHandler={onClickVideoHandler}
         videoList={Videos}

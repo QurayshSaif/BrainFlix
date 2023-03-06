@@ -6,7 +6,6 @@
   margin: 1rem;
 
   @include desktop {
-    display: block;
     margin: 0 auto;
     max-width: 80rem;
   }
