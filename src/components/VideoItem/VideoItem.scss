@@ -1,24 +1,24 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
-.video-item{
-    display: flex;
-    margin-bottom: 1rem;
+.video-item {
+  display: flex;
+  margin-bottom: 1rem;
 
-    &__image{
-        width: 8rem;
-        border-radius: 6px;
-        height: 5rem;
-        object-fit: cover;
-    }
+  &__image {
+    width: 8rem;
+    border-radius: 6px;
+    height: 5rem;
+    object-fit: cover;
+  }
 
-    &__container{
-        margin-left: 1rem;
-    }
+  &__container {
+    margin-left: 1rem;
+  }
 
-    &__title{
-        margin: 0;
-        margin-bottom: 0.5rem;
-    }
-
+  &__title {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
 }

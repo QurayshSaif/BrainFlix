@@ -16,15 +16,6 @@
     &--border {
       border-bottom: 1px solid $brainFlix-mercury;
     }
-
-    // @include tablet {
-    //   margin: 1rem 4rem;
-    // }
-
-    // @include desktop {
-    //   margin: 0 auto;
-    //   max-width: 80rem;
-    // }
   }
 
   &__icon-container {
@@ -63,9 +54,5 @@
 
   &__text {
     margin: auto auto 0.75rem 0.75rem;
-  }
-
-  @include tablet {
-    margin: 1rem;
   }
 }

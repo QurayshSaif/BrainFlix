@@ -5,8 +5,21 @@
 .comments {
   margin: 1rem;
 
+  @include tablet {
+    margin: 2rem;
+  }
+
   @include desktop {
     margin: 0 auto;
     max-width: 80rem;
+  }
+
+  &__title {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+
+    @include tablet {
+      margin-top: 2.5rem;
+    }
   }
 }
