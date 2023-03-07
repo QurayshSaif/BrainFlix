@@ -26,7 +26,9 @@ export default function CommentsForm() {
               placeholder="Add a new comment"
             ></textarea>
           </div>
-          <Button img={CommentsIcon} text="COMMENT" />
+          <button className="comments-form__button">
+            <Button img={CommentsIcon} text="COMMENT" />
+          </button>
         </form>
       </div>
     </div>

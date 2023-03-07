@@ -24,6 +24,10 @@
     max-width: 500px;
   }
 
+  &__link {
+    width: 100%;
+    text-decoration: none;
+  }
   &__icon {
     padding: 0.5rem;
     height: 1.8rem;

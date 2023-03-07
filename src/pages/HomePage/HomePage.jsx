@@ -1,13 +1,13 @@
 import "./HomePage.scss";
-import JsonVideoDetails from "../data/video-details.json";
-import Videos from "../data/videos.json";
+import JsonVideoDetails from "../../data/video-details.json";
+import Videos from "../../data/videos.json";
 
 import { useState } from "react";
-import Header from "../components/Header/header";
-import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
-import VideoList from "../components/VideoList/VideoList";
-import VideoDetails from "../components/VideoDetails/VideoDetails";
-import Comments from "../components/Comments/Comments";
+import Header from "../../components/Header/header";
+import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
+import VideoList from "../../components/VideoList/VideoList";
+import VideoDetails from "../../components/VideoDetails/VideoDetails";
+import Comments from "../../components/Comments/Comments";
 
 function HomePage() {
   const [activeVideo, setActiveVideo] = useState(JsonVideoDetails[0]);
