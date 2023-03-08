@@ -47,7 +47,7 @@
     border-radius: 50%;
     object-fit: cover;
     margin-right: auto;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 
     @include tablet {
       margin-left: 0;
@@ -76,7 +76,7 @@
     }
     @media screen and (max-width: 768px) {
       margin-left: 0;
-      width: calc(100% - 135px);
+      width: calc(100% - 105px);
     }
   }
 }

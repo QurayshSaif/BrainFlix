@@ -3,7 +3,7 @@
 @use "../../styles/partials/fonts" as *;
 
 .button {
-  width: 95%;
+  width: 100%;
   background-color: $brainFlix-blue;
   height: 3rem;
   border-radius: 5px;
@@ -36,6 +36,7 @@
   &__text {
     color: white;
     margin: 0 auto;
+    padding-right: 3rem;
 
     @include tablet {
       margin: 0 auto 0 1.5rem;

@@ -1,0 +1,99 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+
+.upload-form {
+  // margin: auto 1rem auto auto;
+  margin: 1rem;
+
+  @include tablet {
+    margin: 1rem;
+  }
+
+  @include desktop {
+    margin-left: 5rem;
+  }
+
+  &__primary-container {
+    @include desktop {
+      margin-left: 5rem;
+      margin: 3rem auto 2rem auto;
+      max-width: 80rem;
+    }
+  }
+
+  &__img-container {
+    margin-bottom: 1rem;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__input-container {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  &__input-label {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 0.85rem;
+    color: $brainFlix-silver;
+    font-weight: 700;
+  }
+
+  &__input-text {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 2px solid $brainFlix-silver;
+    font-size: 1.15rem;
+    width: 100%;
+    font-family: Avenir;
+    background-color: $brainFlix-alabaster;
+
+    &--name {
+      height: 3rem;
+    }
+
+    &--area {
+      resize: none;
+      height: 7rem;
+    }
+
+    &:focus {
+      border-color: $brainFlix-blue;
+    }
+
+    &::placeholder {
+      color: $brainFlix-black;
+    }
+  }
+
+  &__btn-submit {
+    padding: 0;
+    border: none;
+    background-color: white;
+    width: 100%;
+    margin-top: -1.3rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    margin: 0 auto;
+  }
+
+  &__cancel {
+    color: $brainFlix-blue;
+    font-weight: 700;
+    margin: 2rem auto;
+  }
+}
