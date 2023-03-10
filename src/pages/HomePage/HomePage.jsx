@@ -20,6 +20,7 @@ function HomePage() {
     //set this particular usestate with the selected object
     // if no object is found, it will response with {}
     setActiveVideo(selectedVideo);
+    window.scrollTo(0, 0);
   };
   return (
     <>

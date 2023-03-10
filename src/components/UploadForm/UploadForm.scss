@@ -5,13 +5,32 @@
 .upload-form {
   // margin: auto 1rem auto auto;
   margin: 1rem;
+  border-top: 1px solid $brainFlix-mercury;
 
   @include tablet {
-    margin: 1rem;
+    margin: 2rem;
+    margin-top: 0;
   }
 
   @include desktop {
-    margin-left: 5rem;
+    margin-left: 1rem;
+  }
+
+  &__title {
+    margin: 2rem 0;
+    font-size: 2rem;
+
+    @include tablet {
+      border-bottom: 1px solid $brainFlix-mercury;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__form-container {
+    @include desktop {
+      display: flex;
+      gap: 2rem;
+    }
   }
 
   &__primary-container {
@@ -24,10 +43,23 @@
 
   &__img-container {
     margin-bottom: 1rem;
+
+    @include desktop {
+      width: 35%;
+    }
   }
 
   &__image {
     width: 100%;
+    border-radius: 0.25rem;
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include desktop {
+      width: 100%;
+    }
   }
 
   &__form {
@@ -35,6 +67,10 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 0.5rem;
+
+    @include desktop {
+      width: 65%;
+    }
   }
 
   &__input-container {
@@ -45,7 +81,6 @@
   &__input-label {
     display: block;
     margin-bottom: 0.2rem;
-    font-size: 0.85rem;
     color: $brainFlix-silver;
     font-weight: 700;
   }
@@ -54,11 +89,15 @@
     box-sizing: border-box;
     padding: 0.5rem;
     border-radius: 6px;
-    border: 2px solid $brainFlix-silver;
+    border: 2px solid $brainFlix-mercury;
     font-size: 1.15rem;
     width: 100%;
     font-family: Avenir;
     background-color: $brainFlix-alabaster;
+
+    @include tablet {
+      padding: 1rem;
+    }
 
     &--name {
       height: 3rem;
@@ -78,6 +117,18 @@
     }
   }
 
+  &__btn-container {
+    width: 100%;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      border-top: 1px solid $brainFlix-mercury;
+      padding-top: 1rem;
+    }
+  }
+
   &__btn-submit {
     padding: 0;
     border: none;
@@ -89,11 +140,24 @@
   &__link {
     text-decoration: none;
     margin: 0 auto;
+
+    @include tablet {
+      margin: 0;
+
+      &--publish {
+        order: 1;
+      }
+    }
   }
 
   &__cancel {
     color: $brainFlix-blue;
     font-weight: 700;
     margin: 2rem auto;
+    text-align: center;
+    @include tablet {
+      margin-right: 5rem;
+      padding-bottom: 0.6rem;
+    }
   }
 }

@@ -19,13 +19,14 @@ export default function UploadForm() {
         </div>
         <form className="upload-form__form">
           <div class="upload-form__input-container">
-            <label className="upload-form__input-label" for="name">
+            <label className="upload-form__input-label" for="title">
               TITLE YOUR VIDEO
             </label>
             <input
               className="upload-form__input-text upload-form__input-text--name"
               type="text"
-              id="name"
+              name="title"
+              id="title"
               placeholder="Add a title to your video"
             />
           </div>
@@ -41,13 +42,17 @@ export default function UploadForm() {
               placeholder="Add a description of your video"
             ></textarea>
           </div>
+        </form>
+      </div>
+      <div className="upload-form__btn-container">
+        <Link className="upload-form__link upload-form__link--publish" to="/">
           <button className="upload-form__btn-submit" type="submit">
             <Button text="PUBLISH" img={Publish} />
           </button>
-          <Link className="upload-form__link" to="/">
-            <div className="upload-form__cancel">CANCEL</div>
-          </Link>
-        </form>
+        </Link>
+        <Link className="upload-form__link" to="/">
+          <div className="upload-form__cancel">CANCEL</div>
+        </Link>
       </div>
     </section>
   );
