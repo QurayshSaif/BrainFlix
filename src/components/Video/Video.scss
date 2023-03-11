@@ -1,0 +1,21 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables" as *;
+.desktop {
+  @include desktop {
+    display: flex;
+  }
+
+  &__details-side {
+    @include desktop {
+      margin: 1.5rem;
+    }
+  }
+
+  &__aside {
+    @include desktop {
+      border-left: 1px solid $brainFlix-mercury;
+      width: 54%;
+    }
+  }
+}
