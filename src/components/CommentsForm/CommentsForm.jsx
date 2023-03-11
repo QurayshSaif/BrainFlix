@@ -16,7 +16,7 @@ export default function CommentsForm() {
       <div className="comments-form__container">
         <form className="comments-form__form">
           <div className="comments-form__input-container">
-            <label className="comments-form__input-label" for="comment">
+            <label className="comments-form__input-label" htmlFor="comment">
               JOIN THE CONVERSATION
             </label>
             <textarea
@@ -26,7 +26,7 @@ export default function CommentsForm() {
               placeholder="Add a new comment"
             ></textarea>
           </div>
-          <button className="comments-form__button">
+          <button type="button" className="comments-form__button">
             <Button img={CommentsIcon} text="COMMENT" />
           </button>
         </form>

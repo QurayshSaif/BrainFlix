@@ -15,6 +15,9 @@
     background-color: $brainFlix-darkBlue;
   }
 
+  &.red {
+    background-color: red;
+  }
   @include tablet {
     width: 12rem;
     max-width: 10rem;

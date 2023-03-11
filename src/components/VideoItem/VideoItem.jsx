@@ -1,14 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import "./VideoItem.scss";
 
-export default function VideoItem({
-  id,
-  image,
-  title,
-  subtitle,
-  onClickVideoHandler,
-}) {
+export default function VideoItem({ id, image, title, subtitle }) {
+  const navigate = useNavigate();
   return (
-    <article className="video-item" onClick={() => onClickVideoHandler(id)}>
+    <article
+      className="video-item"
+      onClick={() => navigate(`../videos/${id}`, { replace: true })}
+    >
       <div className="video-item__image-container">
         <img className="video-item__image" src={image} alt={title} />
       </div>

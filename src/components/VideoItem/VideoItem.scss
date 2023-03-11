@@ -1,6 +1,12 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
+.video-item-anchor,
+.video-item-anchor * {
+  text-decoration: none;
+  color: initial;
+}
+
 .video-item {
   display: flex;
   margin-bottom: 1rem;

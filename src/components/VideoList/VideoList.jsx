@@ -1,12 +1,8 @@
 import "./VideoList.scss";
 import VideoItem from "../VideoItem/VideoItem";
 
-export default function VideoList({
-  onClickVideoHandler,
-  videoList,
-  activeVideo,
-}) {
-  const inactiveVideo = videoList.filter((video) => {
+export default function VideoList({ videoList, activeVideo }) {
+  const inactiveVideo = videoList?.filter((video) => {
     return video.id !== activeVideo.id;
   });
 
@@ -14,7 +10,7 @@ export default function VideoList({
     <section className="video-list">
       <div className="video-list__container">
         <h2 className="video-list__title">NEXT VIDEOS</h2>
-        {inactiveVideo.map((video) => {
+        {inactiveVideo?.map((video) => {
           return (
             <VideoItem
               key={video.id}
@@ -22,7 +18,6 @@ export default function VideoList({
               image={video.image}
               title={video.title}
               subtitle={video.channel}
-              onClickVideoHandler={onClickVideoHandler}
             />
           );
         })}

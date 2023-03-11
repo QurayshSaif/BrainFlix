@@ -19,7 +19,7 @@ export default function UploadForm() {
         </div>
         <form className="upload-form__form">
           <div class="upload-form__input-container">
-            <label className="upload-form__input-label" for="title">
+            <label className="upload-form__input-label" htmlFor="title">
               TITLE YOUR VIDEO
             </label>
             <input
@@ -32,7 +32,7 @@ export default function UploadForm() {
           </div>
 
           <div className="upload-form__input-container">
-            <label class="upload-form__input-label" for="comment">
+            <label class="upload-form__input-label" htmlFor="comment">
               ADD A VIDEO DESCRIPTION
             </label>
             <textarea

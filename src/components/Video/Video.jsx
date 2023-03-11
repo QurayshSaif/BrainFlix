@@ -1,5 +1,4 @@
 import Comments from "../Comments/Comments";
-import Header from "../Header/header";
 import VideoDetails from "../VideoDetails/VideoDetails";
 import VideoList from "../VideoList/VideoList";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
