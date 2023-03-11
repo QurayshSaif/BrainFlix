@@ -5,14 +5,13 @@ import VideoPage from "./pages/VideoPage/VideoPage";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "./components/Header/header";
+import { API_URL, API_KEY } from "./utils/api";
 
 function App() {
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     axios
-      .get(
-        "https://project-2-api.herokuapp.com/videos?api_key=b1525f0b-9828-4377-bb48-efb4b801d035"
-      )
+      .get(`${API_URL}?api_key=${API_KEY}`)
       .then((result) => {
         setVideos(result.data);
       })

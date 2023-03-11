@@ -1,6 +1,7 @@
 import "./VideoDetails.scss";
 import ViewIcon from "../../assets/icons/views.svg";
 import LikeIcon from "../../assets/icons/likes.svg";
+import formatDate from "../../utils/formatDate";
 
 export default function VideoDetails({
   title,
@@ -10,17 +11,6 @@ export default function VideoDetails({
   likes,
   description,
 }) {
-  // function that converts Unix timestamp to MM/DD/YYYY format
-  function formatDate(timestamp) {
-    const date = new Date(timestamp);
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-    const year = date.getFullYear();
-    const formattedMonth = month < 10 ? `0${month}` : month;
-    const formattedDay = day < 10 ? `0${day}` : day;
-    const formattedDate = `${formattedMonth}/${formattedDay}/${year}`;
-    return formattedDate;
-  }
   return (
     <section className="video-details">
       <h1 className="video-details__title">{title}</h1>

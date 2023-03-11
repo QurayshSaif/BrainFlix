@@ -1,10 +1,9 @@
 import "./HomePage.scss";
-// import JsonVideoDetails from "../../data/video-details.json";
-// import Videos from "../../data/videos.json";
 
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Video from "../../components/Video/Video";
+import { API_URL, API_KEY } from "../../utils/api";
 
 function HomePage({ videos }) {
   const [activeVideo, setActiveVideo] = useState({});
@@ -13,9 +12,7 @@ function HomePage({ videos }) {
     if (videos && videos.length > 0) {
       const firstVideo = videos[0];
       axios
-        .get(
-          `https://project-2-api.herokuapp.com/videos/${firstVideo.id}?api_key=b1525f0b-9828-4377-bb48-efb4b801d035`
-        )
+        .get(`${API_URL}/${firstVideo.id}?api_key=${API_KEY}`)
         .then((result) => {
           setActiveVideo(result.data);
         })
