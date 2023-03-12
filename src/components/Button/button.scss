@@ -15,9 +15,6 @@
     background-color: $brainFlix-darkBlue;
   }
 
-  &.red {
-    background-color: red;
-  }
   @include tablet {
     width: 12rem;
     max-width: 10rem;
@@ -33,13 +30,14 @@
   }
   &__icon {
     padding: 0.5rem;
-    height: 1.8rem;
+    height: 1.5rem;
   }
 
   &__text {
     color: white;
     margin: 0 auto;
     padding-right: 3rem;
+    font-size: 1rem;
 
     @include tablet {
       margin: 0 auto 0 1.5rem;
