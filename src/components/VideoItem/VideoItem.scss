@@ -4,6 +4,7 @@
 .video-item {
   display: flex;
   margin-bottom: 1rem;
+  cursor: pointer;
 
   &__image {
     width: 8rem;

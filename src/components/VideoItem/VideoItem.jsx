@@ -6,7 +6,10 @@ export default function VideoItem({ id, image, title, subtitle }) {
   return (
     <article
       className="video-item"
-      onClick={() => navigate(`../videos/${id}`, { replace: true })}
+      onClick={() => {
+        navigate(`../videos/${id}`, { replace: true });
+        window.scrollTo(0, 0);
+      }}
     >
       <div className="video-item__image-container">
         <img className="video-item__image" src={image} alt={title} />
