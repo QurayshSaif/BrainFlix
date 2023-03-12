@@ -5,6 +5,13 @@
 .comments-form {
   display: flex;
   margin-bottom: 2.5rem;
+  @include tablet {
+    margin-left: 1rem;
+  }
+
+  @include desktop {
+    margin-left: 0;
+  }
 
   &__icon-container {
     width: 5rem;
@@ -26,6 +33,10 @@
     object-fit: cover;
     object-position: 0.1px;
     margin: 2rem 1rem 0 1rem;
+
+    @include desktop {
+      margin-left: 0;
+    }
   }
 
   &__form {
@@ -59,7 +70,7 @@
     border-radius: 4px;
     border: 1px solid $brainFlix-mercury;
     font-size: 1rem;
-    width: 95%;
+    width: 98%;
     background-color: $brainFlix-alabaster;
     resize: none;
     height: 7rem;
