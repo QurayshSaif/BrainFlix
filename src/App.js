@@ -5,18 +5,23 @@ import VideoPage from "./pages/VideoPage/VideoPage";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "./components/Header/header";
-import { API_URL, API_KEY } from "./utils/api";
+import { API_URL } from "./utils/api";
 
 function App() {
   const [videos, setVideos] = useState([]);
-  useEffect(() => {
+
+  const fetchVideo = () => {
     axios
-      .get(`${API_URL}?api_key=${API_KEY}`)
+      .get(`${API_URL}`)
       .then((result) => {
         setVideos(result.data);
       })
       .catch((error) => console.error(error));
+  };
+  useEffect(() => {
+    fetchVideo();
   }, []);
+
   return (
     <BrowserRouter>
       <Header />
@@ -27,7 +32,11 @@ function App() {
           path="/videos/:id"
           element={<VideoPage videos={videos} />}
         />
-        <Route path="/upload" element={<UploadPage />} />
+        <Route
+          path="/upload"
+          fetchVideos={fetchVideo()}
+          element={<UploadPage />}
+        />
         <Route path="*" element={<h1>404 ERROR</h1>} />
       </Routes>
     </BrowserRouter>

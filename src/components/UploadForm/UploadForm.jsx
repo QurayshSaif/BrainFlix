@@ -4,16 +4,32 @@ import Publish from "../../assets/icons/publish.svg";
 import UploadImg from "../../assets/images/Upload-video-preview.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { API_URL } from "../../utils/api";
+import axios from "axios";
 
-export default function UploadForm() {
+export default function UploadForm({ fetchVideo }) {
   const [successMessage, setSuccessMessage] = useState(false);
   const navigate = useNavigate();
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setSuccessMessage(true);
     setTimeout(() => {
       navigate("/");
     }, 2000);
+
+    const title = e.target.title.value;
+    const description = e.target.description.value;
+
+    axios
+      .post(`${API_URL}`, {
+        title: title,
+        description: description,
+      })
+      .then(() => {
+        fetchVideo();
+        e.target.reset();
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -44,14 +60,14 @@ export default function UploadForm() {
           </div>
 
           <div className="upload-form__input-container">
-            <label class="upload-form__input-label" htmlFor="comment">
+            <label class="upload-form__input-label" htmlFor="description">
               ADD A VIDEO DESCRIPTION
             </label>
             <textarea
               required
               className="upload-form__input-text upload-form__input-text--area"
-              name="comment"
-              id="comment"
+              name="description"
+              id="description"
               placeholder="Add a description of your video"
             ></textarea>
             <div className="upload-form__btn-container">

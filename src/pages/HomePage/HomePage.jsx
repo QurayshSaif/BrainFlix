@@ -3,7 +3,7 @@ import "./HomePage.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Video from "../../components/Video/Video";
-import { API_URL, API_KEY } from "../../utils/api";
+import { API_URL } from "../../utils/api";
 
 function HomePage({ videos }) {
   const [activeVideo, setActiveVideo] = useState({});
@@ -12,7 +12,7 @@ function HomePage({ videos }) {
     if (videos && videos.length > 0) {
       const firstVideo = videos[0];
       axios
-        .get(`${API_URL}/${firstVideo.id}?api_key=${API_KEY}`)
+        .get(`${API_URL}/${firstVideo.id}`)
         .then((result) => {
           setActiveVideo(result.data);
         })
