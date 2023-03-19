@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "./components/Header/header";
 import { API_URL } from "./utils/api";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 function App() {
   const [videos, setVideos] = useState([]);
@@ -37,7 +38,7 @@ function App() {
           fetchVideos={fetchVideo()}
           element={<UploadPage />}
         />
-        <Route path="*" element={<h1>404 ERROR</h1>} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );
