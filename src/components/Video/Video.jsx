@@ -10,7 +10,14 @@ const Video = ({ activeVideo, videos }) => {
       <VideoPlayer image={activeVideo?.image || ""} />
       <div className="desktop">
         <div className="desktop__details-side">
-          <VideoDetails {...activeVideo} />
+          <VideoDetails
+            title={activeVideo.title}
+            channel={activeVideo.channel}
+            views={activeVideo.views}
+            timestamp={activeVideo.timestamp}
+            likes={activeVideo.likes}
+            description={activeVideo.description}
+          />
           <Comments video={activeVideo} />
         </div>
         <div className="desktop__aside">

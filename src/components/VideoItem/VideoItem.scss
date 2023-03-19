@@ -6,6 +6,11 @@
   margin-bottom: 1rem;
   cursor: pointer;
 
+  &__link {
+    text-decoration: none;
+    color: black;
+  }
+
   &__image {
     width: 8rem;
     border-radius: 6px;
