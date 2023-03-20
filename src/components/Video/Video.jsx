@@ -4,7 +4,7 @@ import VideoList from "../VideoList/VideoList";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import "./Video.scss";
 
-const Video = ({ activeVideo, videos }) => {
+const Video = ({ activeVideo, videos, setActiveVideo }) => {
   return (
     <>
       <VideoPlayer image={activeVideo?.image || ""} />
@@ -18,7 +18,7 @@ const Video = ({ activeVideo, videos }) => {
             likes={activeVideo.likes}
             description={activeVideo.description}
           />
-          <Comments activeVideo={activeVideo} />
+          <Comments activeVideo={activeVideo} setActiveVideo={setActiveVideo} />
         </div>
         <div className="desktop__aside">
           <VideoList videoList={videos} activeVideo={activeVideo} />

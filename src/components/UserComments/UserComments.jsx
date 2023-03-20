@@ -1,7 +1,21 @@
 import "./UserComments.scss";
 import formatDate from "../../utils/formatDate";
+import { API_URL } from "../../utils/api";
+import axios from "axios";
 
-export default function UserComments({ commentsList }) {
+export default function UserComments({ commentsList, id }) {
+  const handleDelete = (commentId) => {
+    const fetchComments = () => {
+      axios.get(`${API_URL}/${id}`).catch((error) => console.error(error));
+    };
+    axios
+      .delete(`${API_URL}/${id}/comments/${commentId}`, {
+        headers: { "Content-Type": "application/json" },
+      })
+      .then(() => fetchComments())
+      .catch((error) => console.error(error));
+  };
+
   return (
     <section className="comments">
       {commentsList?.map((comment) => (
@@ -18,7 +32,12 @@ export default function UserComments({ commentsList }) {
             </div>
             <div className="comments__third-container">
               <p className="comments__text">{comment.comment}</p>
-              <div className="comments__delete-btn">DELETE</div>
+              <div
+                className="comments__delete-btn"
+                onClick={() => handleDelete(comment.id)}
+              >
+                DELETE
+              </div>
             </div>
           </div>
         </article>
