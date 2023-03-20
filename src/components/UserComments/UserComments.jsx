@@ -18,6 +18,7 @@ export default function UserComments({ commentsList }) {
             </div>
             <div className="comments__third-container">
               <p className="comments__text">{comment.comment}</p>
+              <div className="comments__delete-btn">DELETE</div>
             </div>
           </div>
         </article>

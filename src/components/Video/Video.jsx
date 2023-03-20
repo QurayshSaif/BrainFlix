@@ -18,7 +18,7 @@ const Video = ({ activeVideo, videos }) => {
             likes={activeVideo.likes}
             description={activeVideo.description}
           />
-          <Comments video={activeVideo} />
+          <Comments activeVideo={activeVideo} />
         </div>
         <div className="desktop__aside">
           <VideoList videoList={videos} activeVideo={activeVideo} />
