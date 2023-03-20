@@ -9,9 +9,7 @@ export default function UserComments({ commentsList, id }) {
       axios.get(`${API_URL}/${id}`).catch((error) => console.error(error));
     };
     axios
-      .delete(`${API_URL}/${id}/comments/${commentId}`, {
-        headers: { "Content-Type": "application/json" },
-      })
+      .delete(`${API_URL}/${id}/comments/${commentId}`)
       .then(() => fetchComments())
       .catch((error) => console.error(error));
   };
