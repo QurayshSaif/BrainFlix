@@ -1,10 +1,10 @@
 import "./UploadPage.scss";
 import UploadForm from "../../components/UploadForm/UploadForm";
 
-export default function UploadPage({ fetchVideo }) {
+export default function UploadPage() {
   return (
     <>
-      <UploadForm fetchVideo={fetchVideo} />
+      <UploadForm />
     </>
   );
 }

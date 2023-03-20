@@ -7,15 +7,11 @@ import { useState } from "react";
 import { API_URL } from "../../utils/api";
 import axios from "axios";
 
-export default function UploadForm({ fetchVideo }) {
+export default function UploadForm() {
   const [successMessage, setSuccessMessage] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccessMessage(true);
-    setTimeout(() => {
-      navigate("/");
-    }, 2000);
 
     const title = e.target.title.value;
     const description = e.target.description.value;
@@ -26,10 +22,12 @@ export default function UploadForm({ fetchVideo }) {
         description: description,
       })
       .then(() => {
-        fetchVideo();
-        e.target.reset();
+        setSuccessMessage(true);
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
       })
-      .catch((err) => console.log(err));
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -45,7 +43,7 @@ export default function UploadForm({ fetchVideo }) {
           />
         </div>
         <form className="upload-form__form" onSubmit={handleSubmit}>
-          <div class="upload-form__input-container">
+          <div className="upload-form__input-container">
             <label className="upload-form__input-label" htmlFor="title">
               TITLE YOUR VIDEO
             </label>
@@ -60,7 +58,7 @@ export default function UploadForm({ fetchVideo }) {
           </div>
 
           <div className="upload-form__input-container">
-            <label class="upload-form__input-label" htmlFor="description">
+            <label className="upload-form__input-label" htmlFor="description">
               ADD A VIDEO DESCRIPTION
             </label>
             <textarea
