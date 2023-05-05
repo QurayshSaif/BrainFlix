@@ -1,1 +1,1 @@
-export const API_URL = "http://localhost:8080/videos";
+export const API_URL = "https://brainflix-3qel.onrender.com/videos";
