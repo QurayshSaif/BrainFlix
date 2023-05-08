@@ -2,8 +2,15 @@ import "./VideoItem.scss";
 import { Link } from "react-router-dom";
 
 export default function VideoItem({ id, image, title, subtitle }) {
+  const handleVideoItemClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
-    <Link className="video-item__link" to={`/videos/${id}`}>
+    <Link
+      onClick={handleVideoItemClick}
+      className="video-item__link"
+      to={`/videos/${id}`}
+    >
       <article className="video-item">
         <div className="video-item__image-container">
           <img className="video-item__image" src={image} alt={title} />

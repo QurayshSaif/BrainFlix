@@ -23,7 +23,7 @@ function HomePage({ videos }) {
   }, [videos]);
 
   if (loading) {
-    return <ReactLoading type={"spin"} color={"#00bcd4"} />;
+    return <ReactLoading type={"spin"} color={"#0095FF"} className="loading" />;
   }
 
   return <Video activeVideo={activeVideo} videos={videos} />;
